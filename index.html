@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Riddhi ❤️ | Maan Jao Na</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Floating Romantic Canvas Background -->
+    <canvas id="petal-canvas"></canvas>
+
+    <!-- Ambient Glow Orbs -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <!-- Audio Player Floating Bar -->
+    <header class="top-nav">
+      <div class="brand-tag">
+        <i class="fa-solid fa-heart-pulse heartbeat"></i>
+        <span>Made with love for <strong>Riddhi</strong></span>
+      </div>
+      <button
+        id="music-toggle"
+        class="music-pill"
+        title="Toggle romantic background music"
+      >
+        <span class="music-bars"> <i></i><i></i><i></i><i></i> </span>
+        <span id="music-label">Play Romantic Melody</span>
+      </button>
+    </header>
+
+    <main class="page-container">
+      <!-- HERO SECTION -->
+      <section class="hero-section glass-card">
+        <div class="hero-badge">
+          <i class="fa-solid fa-sparkles"></i> Sirf Ek Smile Ke Liye
+        </div>
+        <h1 class="hero-title">
+          Maan Jao Na <span class="signature-name">Riddhi</span> ❤️
+        </h1>
+        <p class="hero-subtitle">
+          Jaanta hoon mujhse galti hui hai, par tumhari narazgi se zyada mushkil
+          kuch nahi hota. Ek pyari si smile de do na please?
+        </p>
+
+        <div class="hero-actions">
+          <a href="#shayari-section" class="btn btn-secondary">
+            <i class="fa-solid fa-book-open-reader"></i> Dil Ki Shayaris
+          </a>
+          <a href="#question-card" class="btn btn-primary pulse-btn">
+            <i class="fa-solid fa-heart"></i> Maaf Kiya?
+          </a>
+        </div>
+      </section>
+
+      <!-- SHAYARI SECTION -->
+      <section id="shayari-section" class="shayari-section">
+        <div class="section-heading text-center">
+          <span class="sub-label">DIL KI AWAZ</span>
+          <h2>Shayari Sirf Riddhi Ke Naam ✨</h2>
+          <p>Har ek lafz sachha hai, dil se likha gaya hai...</p>
+        </div>
+
+        <div class="shayari-filter">
+          <button class="filter-chip active" data-filter="all">
+            Sabhi (All)
+          </button>
+          <button class="filter-chip" data-filter="sorry">Maafi Wali 🥺</button>
+          <button class="filter-chip" data-filter="tareef">
+            Tareef Riddhi Ki ✨
+          </button>
+          <button class="filter-chip" data-filter="romantic">
+            Mohabbat Bhari 💖
+          </button>
+        </div>
+
+        <div class="shayari-grid" id="shayari-grid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </section>
+
+      <!-- NARAZGI METER -->
+      <section class="meter-section glass-card">
+        <div class="section-heading">
+          <span class="sub-label">HONEST METER</span>
+          <h2>Abhi Kitna Gussa Ho, Riddhi?</h2>
+          <p>Slider ko right se left khiska kar gussa kam kar do na 🥺</p>
+        </div>
+
+        <div class="meter-wrapper">
+          <div class="slider-container">
+            <input
+              type="range"
+              id="anger-slider"
+              min="0"
+              max="100"
+              value="85"
+              step="1"
+            />
+            <div class="slider-track-highlight" id="slider-highlight"></div>
+          </div>
+
+          <div class="meter-display">
+            <div class="meter-score" id="meter-score">85% Gussa</div>
+            <div class="meter-badge" id="meter-reaction-badge">
+              Bohot Zyada Gussa 😭
+            </div>
+          </div>
+
+          <div class="reaction-card" id="reaction-card">
+            <div class="reaction-emoji" id="reaction-emoji">🥺</div>
+            <p id="reaction-text">
+              Itna gussa? Mera dil toot jayega Riddhi... thoda sa slide karke 0%
+              par le aao na!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPAIR COUPONS SECTION -->
+      <section class="coupons-section glass-card">
+        <div class="section-heading text-center">
+          <!-- <span class="sub-label">LIFETIME VALIDITY</span> -->
+          <h2>Peace Offering: Love Coupons 🎟️</h2>
+          <p>Riddhi, apni favourite coupon select kro!</p>
+        </div>
+
+        <div class="coupons-grid">
+          <div class="coupon-item">
+            <div class="coupon-tag">COUPON #01</div>
+            <h3>Midnight Ice Cream & Late night walks 🍦</h3>
+            <p>
+              Whenever you crave your favourite ice cream, no questions asked
+              for 1 week.
+            </p>
+            <button
+              class="redeem-btn"
+              onclick="redeemCoupon(this, 'Midnight Ice Cream')"
+            >
+              <span>Redeem This</span>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+          </div>
+
+          <div class="coupon-item">
+            <div class="coupon-tag">COUPON #02</div>
+            <h3>Win Any Argument Card 🏆</h3>
+            <p>
+              Show this card and I will immediately surrender: "Haan Riddhi,
+              tumhi sahi ho!"
+            </p>
+            <button
+              class="redeem-btn"
+              onclick="redeemCoupon(this, 'Win Any Argument')"
+            >
+              <span>Redeem This</span>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+          </div>
+
+          <div class="coupon-item">
+            <div class="coupon-tag">COUPON #03</div>
+            <h3>Unlimited Warm Hugs & Listening 🫂</h3>
+            <p>
+              Unlimited warm cuddles and all ears to every single thought in
+              your mind.
+            </p>
+            <button
+              class="redeem-btn"
+              onclick="redeemCoupon(this, 'Unlimited Hugs')"
+            >
+              <span>Redeem This</span>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+          </div>
+
+          <div class="coupon-item">
+            <div class="coupon-tag">COUPON #04</div>
+            <h3>Queen Treatment All Day 👑</h3>
+            <p>
+              A whole day dedicated solely to your nakhre, pampering & cooking
+              your favourite foods.
+            </p>
+            <button
+              class="redeem-btn"
+              onclick="redeemCoupon(this, 'Queen Treatment')"
+            >
+              <span>Redeem This</span>
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL DECISION (DODGING BUTTON) -->
+      <section id="question-card" class="question-card glass-card">
+        <div class="question-heart-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <h2>Ab Maan Bhi Jao Na, Riddhi? 🥺</h2>
+        <p class="question-sub">
+          Dekho itni mehnat se website banayi hai sirf tumhare chehre par ek
+          pyari si hasi dekhne ke liye!
+        </p>
+
+        <div class="decision-arena" id="decision-arena">
+          <button id="yes-btn" class="btn btn-yes">
+            <i class="fa-solid fa-heart"></i> Haan, Maan Gayi! 🥰
+          </button>
+          <button id="no-btn" class="btn btn-no">Nahi Maanungi 😤</button>
+        </div>
+
+        <p class="dodge-hint" id="dodge-hint">
+          (Psst... 'Nahi' wala button thoda shararti hai, click karke dekho zara
+          😉)
+        </p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Har saans me tera hi khayal hai, Riddhi ❤️</p>
+      <p class="small-credit">Made with unconditional love just for you.</p>
+    </footer>
+
+    <!-- CELEBRATION MODAL (POPUP ON HAAN) -->
+    <div class="modal-backdrop" id="celebration-modal">
+      <div class="modal-card">
+        <div class="modal-hearts-burst">🎉💖🥰✨</div>
+        <h2>Yayyy! Thank You Riddhi! ❤️</h2>
+        <p>
+          I promise dobara itna naraz hone ka mauka nahi dunga. Tumhari smile hi
+          meri duniya ki sabse pyari cheez hai!
+        </p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="whatsapp-reply-btn">
+            <i class="fa-brands fa-whatsapp"></i> Send "Maan Gayi ❤️" on
+            WhatsApp
+          </button>
+          <button class="btn btn-secondary" onclick="closeModal()">
+            Close & Smile 😊
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- COUPON CONFIRMATION MODAL -->
+    <div class="modal-backdrop" id="coupon-modal">
+      <div class="modal-card">
+        <div class="modal-hearts-burst">🎟️✨</div>
+        <h2>Pakka Yahi Chahiye? 🥺</h2>
+        <p id="coupon-confirm-text">
+          Kya tum sach me yeh coupon redeem karna chahti ho? Ek baar select
+          karne ke baad doosra lock ho jayega!
+        </p>
+        <div
+          class="modal-actions"
+          style="flex-direction: row; justify-content: center; gap: 14px"
+        >
+          <button class="btn btn-primary" id="confirm-redeem-btn">
+            <i class="fa-solid fa-check"></i> Haan, Pakka! ❤️
+          </button>
+          <button class="btn btn-secondary" onclick="closeCouponModal()">
+            Sochne Do 🤔
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- External JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
